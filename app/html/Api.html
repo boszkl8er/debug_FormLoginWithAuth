@@ -40,8 +40,10 @@
 				console.log('textStatus = '+textStatus);
 				console.log('jqXHR = '+jqXHR);
 			},
-			
-			error: function(xhr, textStatus, errorThrown, response, status, error) { 
+			/*error: function(obj){
+				console.log('error obj = '+obj);
+			},*/
+			error: function(xhr, textStatus, errorThrown, response) { 
 			
 				var err = eval("(" + xhr.responseText + ")");
 				alert('err message = '+err.Message);
@@ -49,8 +51,8 @@
 				console.log('Error!  Status = ' + xhr.status);
 				console.log('textStatus = '+textStatus);
 				console.log('errorThrown = '+errorThrown);
-				console.log('status = '+status);
-				console.log('error = '+error);
+				//console.log('status = '+status);
+				//console.log('error = '+error);
 				
 				console.log('response = '+response);
 				//console.log('response = '+response.redirect);
