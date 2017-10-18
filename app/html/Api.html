@@ -5,31 +5,18 @@
 
 		console.log('Call api html');
 		console.log('-------------------------------------');
-		//var apiToken = angular.element(document.getElementById('apiFormIO')).scope().getToken3();
-		//console.log('Send token to API  = '+apiToken);
+		
+		var apiToken = angular.element(document.getElementById('apiFormIO')).scope().getToken3();
+		console.log('Send token to API  = '+apiToken);
+		
 		var apiToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IjJLVmN1enFBaWRPTHFXU2FvbDd3Z0ZSR0NZbyIsImtpZCI6IjJLVmN1enFBaWRPTHFXU2FvbDd3Z0ZSR0NZbyJ9.eyJhdWQiOiI4NGEzMDM0OS03YzZkLTQyZmMtYTkyZS1mYTdiNzc0ZjY2ZTkiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC8zZTBiNmNiZC00OTU5LTRkMDEtODFiZi1jZTg4M2RkYWJkOTYvIiwiaWF0IjoxNTA4MzExMTI0LCJuYmYiOjE1MDgzMTExMjQsImV4cCI6MTUwODMxNTAyNCwiYWlvIjoiWTJWZ1lCRDdMbVovMTgycDh0SGxGMGFIZUI1elZObi9xakNKU1pSZXNDMWEwWGVGb1FvQSIsImFtciI6WyJwd2QiXSwiZmFtaWx5X25hbWUiOiJUb25nc2F3YW5nIiwiZ2l2ZW5fbmFtZSI6IktpdHRpcG9uZyIsImlwYWRkciI6IjE4My44OC4xLjEzNCIsIm5hbWUiOiJUb25nc2F3YW5nIEtpdHRpcG9uZyAtIFRvZ2V0aGVyIFRIIiwibm9uY2UiOiI1OTEzNzI1Yi0yYThhLTQ2NjQtYjA4YS04MjU1ZDRjODBjY2QiLCJvaWQiOiI2ZjIxMmU4Ny0wZGZhLTQyZGQtYTgyYi1jMzg3ZTNlNDRlOTYiLCJzdWIiOiIweTBpVUxIWDZvWG9zbzdYN2E1cnZ3WDF2U0oxQnpkckx2UWFkWEJnbktRIiwidGlkIjoiM2UwYjZjYmQtNDk1OS00ZDAxLTgxYmYtY2U4ODNkZGFiZDk2IiwidW5pcXVlX25hbWUiOiJrLnRvbmdzYXdhbmdAdG9nZXRoZXJ0ZWFtLmNvLnRoIiwidXBuIjoiay50b25nc2F3YW5nQHRvZ2V0aGVydGVhbS5jby50aCIsInZlciI6IjEuMCJ9.rjPfiqUDJFVmvYe4tgUWt7caIfrH3EpE_3XvqUqqSw_UOSWuil8iG8UYyEfmzkKH1RCss52xj270bUAMEa8hR-4jZl-PNfyeSHU4Veegq3NFKYnHH5-lxLhkd3PpEoI65FVlVCMJzf82q1LcD42Z1Znagtme0fdr8hJIDIvJ5QOm4ay2MnvJViz9K27lqjiA1Btenltb-abKL1HJa-ctqP0WhhNzsXIhH8zO19tG26y_EnzAzqe2s7PL7qXv_wjI2ShcsqOdPFN6BsRBxHTsCVysfpKSkVKawe_Uoltz5UrIkoQcZSbYa1AWdC11grPxXNM1F9mFDO6cWcIdbtpGVg';
 
 		var url = 'https://together.azure-api.net/accesscdn/CDNToken?id_token='+apiToken;
-		/*$.ajax({
-            url: url,
-            beforeSend: function(xhrObj){
-                //Request headers
-            },
-            type: "GET",
-			success: function (data, textStatus){
-				console.log('function success');
-				console.log('-------------------------------');
-				console.log('data = '+data);
-				console.log('data redirect = '+data.redirect);
-			}
-        }).done(function(data){
-            console.log('done');
-			console.log('data = '+data);
-        }).fail(function(err){
-            console.log(err)
-        });*/
 		
-		$.ajax({
+		
+		
+		
+		/*$.ajax({
             url: url,
             beforeSend: function(xhrObj){
                 //Request headers
@@ -43,13 +30,7 @@
 				console.log('textStatus = '+textStatus);
 				console.log('jqXHR = '+jqXHR);
 			},
-			/*error: function(obj){
-				console.log('error obj = '+obj);
-			},*/
 			error: function(xhr, textStatus, errorThrown, response, status, error) { 
-			
-				//var err = eval("(" + xhr.responseText + ")");
-				//alert('err message = '+err.Message);
 			
 				console.log('xhr = '+xhr);
 				console.log('xhr text'+xhr.responseText);
@@ -69,7 +50,7 @@
 				
 				//window.location.href = 'https://together.azure-api.net/accesscdn/CDNToken?id_token='+apiToken;
 			},
-       });
+       });*/
 		console.log('-------------------------------------');
 		
 	</script>
