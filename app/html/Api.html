@@ -12,7 +12,14 @@
             beforeSend: function(xhrObj){
                 //Request headers
             },
-            type: "GET"
+            type: "GET",
+			success: function (data, textStatus){
+				console.log('function success');
+				console.log('-------------------------------');
+				console.log('data = '+data);
+				console.log('data redirect = '+data.redirect);
+				//window.location.href = 'https://tog-demo-endpoint.azureedge.net/sub2/index.html?';
+			}
         }).done(function(data){
             console.log('done');
 			console.log('data = '+data);
