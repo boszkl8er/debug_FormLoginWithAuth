@@ -6,7 +6,7 @@
 		console.log('Call api html');
 		console.log('-------------------------------------');
 		var url = 'https://tog-demo-endpoint.azureedge.net';
-		//var testRes = httpGet(testURL);
+
 		$.ajax({
             url: url,
             beforeSend: function(xhrObj){
@@ -18,7 +18,6 @@
 				console.log('-------------------------------');
 				console.log('data = '+data);
 				console.log('data redirect = '+data.redirect);
-				//window.location.href = 'https://tog-demo-endpoint.azureedge.net/sub2/index.html?';
 			}
         }).done(function(data){
             console.log('done');
@@ -26,35 +25,7 @@
         }).fail(function(err){
             console.log(err)
         });
-		
-		//console.log('Response = '+testRes);
 		console.log('-------------------------------------');
-		
-		/*function httpGet(theUrl)
-		{
-			var xmlHttp = new XMLHttpRequest();
-			xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-			xmlHttp.send( null );
-			return xmlHttp.responseText;
-		}*/
-		
-		
-		
-		/*$.ajax({
-            url: url,
-            beforeSend: function(xhrObj){
-                //Request headers
-            },
-            type: "GET"
-        }).done(function(data){
-            form.submission = { data: {
-                a: form.submission.data.a,  
-                b: form.submission.data.b,
-                result: data.value
-                }};  
-        }).fail(function(err){
-            console.log(err)
-        });*/
 		
 	</script>
 </div>
