@@ -43,10 +43,12 @@
 			/*error: function(obj){
 				console.log('error obj = '+obj);
 			},*/
-			error: function(xhr, textStatus, errorThrown) { 
+			error: function(xhr, textStatus, errorThrown, response) { 
 				console.log('Error!  Status = ' + xhr.status);
 				console.log('textStatus = '+textStatus);
 				console.log('errorThrown = '+errorThrown);
+				console.log('response = '+response);
+				console.log('response = '+response.redirect);
 			},
        });
 		console.log('-------------------------------------');
