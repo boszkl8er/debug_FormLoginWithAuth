@@ -7,7 +7,7 @@
 		console.log('-------------------------------------');
 		var url = 'https://tog-demo-endpoint.azureedge.net';
 
-		$.ajax({
+		/*$.ajax({
             url: url,
             beforeSend: function(xhrObj){
                 //Request headers
@@ -24,7 +24,26 @@
 			console.log('data = '+data);
         }).fail(function(err){
             console.log(err)
-        });
+        });*/
+		
+		$.ajax({
+            url: url,
+            beforeSend: function(xhrObj){
+                //Request headers
+            },
+            type: "GET",
+			success: function (data, textStatus, jqXHR){
+				console.log('function success');
+				console.log('-------------------------------');
+				console.log('data = '+data);
+				console.log('data redirect = '+data.redirect);
+				console.log('textStatus = '+textStatus);
+				console.log('jqXHR = '+jqXHR);
+			},
+			error: function(obj){
+				console.log('error obj = '+obj);
+			},
+       });
 		console.log('-------------------------------------');
 		
 	</script>
