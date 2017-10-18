@@ -40,8 +40,13 @@
 				console.log('textStatus = '+textStatus);
 				console.log('jqXHR = '+jqXHR);
 			},
-			error: function(obj){
+			/*error: function(obj){
 				console.log('error obj = '+obj);
+			},*/
+			error: function(xhr, textStatus, errorThrown) { 
+				console.log('Error!  Status = ' + xhr.status);
+				console.log('textStatus = '+textStatus);
+				console.log('errorThrown = '+errorThrown);
 			},
        });
 		console.log('-------------------------------------');
