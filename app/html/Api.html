@@ -3,13 +3,20 @@
 	
 	<script type='text/javascript'>
 
-		console.log('debug111');
-		window.onload = function(){
-			console.log('Call window onload');
-		}
+		console.log('Call api html');
+		console.log('-------------------------------------');
+		var testURL = 'https://tog-demo-endpoint.azureedge.net';
+		var testRes = httpGet(testURL);
 		
-		function divOnload(){
-			console.log('Call div onload');
+		console.log('Response = '+testRes);
+		console.log('-------------------------------------');
+		
+		function httpGet(theUrl)
+		{
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+			xmlHttp.send( null );
+			return xmlHttp.responseText;
 		}
 	</script>
 </div>
