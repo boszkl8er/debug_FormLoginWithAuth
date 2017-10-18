@@ -40,9 +40,7 @@
 				console.log('textStatus = '+textStatus);
 				console.log('jqXHR = '+jqXHR);
 			},
-			/*error: function(obj){
-				console.log('error obj = '+obj);
-			},*/
+			
 			error: function(xhr, textStatus, errorThrown, response, status, error) { 
 			
 				var err = eval("(" + xhr.responseText + ")");
