@@ -1,6 +1,6 @@
 'use strict';
 angular.module('LfApp')
-.controller('calcCtrl', ['$scope', 'adalAuthenticationService', function ($scope, adalService) {
+.controller('apiCtrl', ['$scope', 'adalAuthenticationService', function ($scope, adalService) {
 	/*$scope.getToken2 = function(){
 		 var resource = adalService.getClientID();
 		 console.log('ClientID = '+resource);
