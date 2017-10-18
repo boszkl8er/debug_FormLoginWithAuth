@@ -6,17 +6,23 @@
 		console.log('Call api html');
 		console.log('-------------------------------------');
 		var testURL = 'https://tog-demo-endpoint.azureedge.net';
-		var testRes = httpGet(testURL);
+		//var testRes = httpGet(testURL);
+		var client = new HttpClient();
+		client.get(testURL, function(response) {
+			// do something with response
+		});
 		
 		console.log('Response = '+testRes);
 		console.log('-------------------------------------');
 		
-		function httpGet(theUrl)
+		/*function httpGet(theUrl)
 		{
 			var xmlHttp = new XMLHttpRequest();
 			xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
 			xmlHttp.send( null );
 			return xmlHttp.responseText;
-		}
+		}*/
+		
+		
 	</script>
 </div>
