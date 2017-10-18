@@ -1,4 +1,4 @@
-<div>
+<div onload="divOnload()">
 	test api
 	
 	<script type='text/javascript'>
@@ -6,6 +6,10 @@
 		
 		window.onload = function(){
 			console.log('Call window onload');
+		}
+		
+		function divOnload(){
+			console.log('Call div onload');
 		}
 	</script>
 </div>
