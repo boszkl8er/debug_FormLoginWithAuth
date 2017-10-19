@@ -14,9 +14,11 @@
 		var apiTokenHome = angular.element(document.getElementById('AppID')).scope().getTokenHome();
 		console.log('Token Home  = '+apiTokenHome);
 		
-		var url = 'https://together.azure-api.net/accesscdn/CDNToken';
+		var url = 'https://together.azure-api.net/accesscdn/CDNToken'+apiTokenHome;
 		
-		$.ajax({
+		var testIframe = document.getElementById("cdnIframe");
+		testIframe.src = url;
+		/*$.ajax({
             url: url,
             beforeSend: function(xhrObj){
                 //Request headers
@@ -42,18 +44,18 @@
 				console.log('response = '+response);
 				
 				
-				var apiToken = angular.element(document.getElementById('apiFormIO')).scope().getToken3();
+				var apiToken = angular.element(document.getElementById('apiFormIO')).scope().getTokenAPI();
 				console.log('debug token  = '+apiToken);
 				
 				//------------- Create Iframe ------------------
 				var cdnURL = "https://together.azure-api.net/accesscdn/CDNToken?id_token="+apiToken;
 				
-				/*var cdnIfrm = document.createElement("iframe");
-				cdnIfrm.id = "cdnIframe";
-				cdnIfrm.setAttribute("src",cdnURL);
-				cdnIfrm.style.width = "640px";
-				cdnIfrm.style.height = "480px";
-				document.getElementById("apiFormIO").appendChild(cdnIfrm);*/
+				//var cdnIfrm = document.createElement("iframe");
+				//cdnIfrm.id = "cdnIframe";
+				//cdnIfrm.setAttribute("src",cdnURL);
+				//cdnIfrm.style.width = "640px";
+				//cdnIfrm.style.height = "480px";
+				//document.getElementById("apiFormIO").appendChild(cdnIfrm);
 				
 				
 				//document.getElementById("cdnIframe").location = cdnURL;
@@ -61,7 +63,7 @@
 				var testIframe = document.getElementById("cdnIframe");
 				testIframe.src = cdnURL;
 			},
-       });
+       });*/
 		console.log('-------------------------------------');
 		
 	</script>
