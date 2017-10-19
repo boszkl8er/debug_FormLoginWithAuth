@@ -1,8 +1,8 @@
 <div id="calcFormIO">
 	 <script type='text/javascript'>
    		 //window.onload = function () {
-      		Formio.createForm(document.getElementById('calcFormIO'), 'https://gtdcbfvemyajgpb.form.io/lfdemocalc'); 
-			console.log('after createForm');
+      		/*Formio.createForm(document.getElementById('calcFormIO'), 'https://gtdcbfvemyajgpb.form.io/lfdemocalc'); 
+			console.log('after createForm');*/
 			
 			
 		//}
@@ -44,6 +44,20 @@
         }).fail(function(err){
             console.log(err)
         });*/
+		
+		
+		
+		var fomr = new FormioForm(document.getElementById('formio'),{
+			readOnly: true
+		});
+		
+		form.src = 'https://gtdcbfvemyajgpb.form.io/lfdemocalc';
+		form.on('submit',(submission) =>{
+			console.log('Form submit');
+		});
+		form.on('error',(errors) => {
+			console.log('We have error!');
+		})
 	</script>
 </div>
 <div id="formio">
