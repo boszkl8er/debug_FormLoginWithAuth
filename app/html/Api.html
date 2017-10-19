@@ -11,6 +11,9 @@
 		//var apiToken = angular.element(document.getElementById('apiFormIO')).scope().getToken3();
 		//console.log('Send token to API  = '+apiToken3);
 		
+		var apiTokenHome = angular.element(document.getElementById('AppID')).scope().getTokenHome();
+		console.log('Send token to API  = '+apiTokenHome);
+		
 		var url = 'https://together.azure-api.net/accesscdn/CDNToken';
 		
 		$.ajax({
@@ -42,12 +45,6 @@
 				var apiToken = angular.element(document.getElementById('apiFormIO')).scope().getToken3();
 				console.log('debug token  = '+apiToken);
 				
-				//window.location.href = 'https://together.azure-api.net/accesscdn/CDNToken?id_token='+apiToken;
-				
-				//var cdnIframe = document.getElementById('cdnIframe');
-				//cdnIframe.src = 'https://together.azure-api.net/accesscdn/CDNToken?id_token='+apiToken;
-				
-				
 				//------------- Create Iframe ------------------
 				var cdnURL = "https://together.azure-api.net/accesscdn/CDNToken?id_token="+apiToken;
 				
@@ -60,6 +57,7 @@
 				
 				
 				//document.getElementById("cdnIframe").location = cdnURL;
+				
 				var testIframe = document.getElementById("cdnIframe");
 				testIframe.src = cdnURL;
 			},

@@ -10,4 +10,10 @@ angular.module('LfApp')
     $scope.isActive = function (viewLocation) {        
         return viewLocation === $location.path();
     };
+	$scope.getTokenHome = function(){
+		 var resource = adalService.getClientID();
+		 console.log('ClientID = '+resource);
+		 var tokenVal = adalService.getCachedToken(resource);
+		 return tokenVal;
+	};
 }]);
