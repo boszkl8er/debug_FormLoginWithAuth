@@ -8,11 +8,11 @@
 		console.log('-------------------------------------');
 		
 		//Error getToken3 is not a function
-		//var apiToken = angular.element(document.getElementById('apiFormIO')).scope().getToken3();
-		//console.log('Send token to API  = '+apiToken3);
+		var apiTokenAPI = angular.element(document.getElementById('apiFormIO')).scope().getTokenAPI();
+		console.log('Send token to API  = '+apiTokenAPI);
 		
 		var apiTokenHome = angular.element(document.getElementById('AppID')).scope().getTokenHome();
-		console.log('Send token to API  = '+apiTokenHome);
+		console.log('Token Home  = '+apiTokenHome);
 		
 		var url = 'https://together.azure-api.net/accesscdn/CDNToken';
 		
