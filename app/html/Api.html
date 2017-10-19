@@ -59,7 +59,9 @@
 				document.getElementById("apiFormIO").appendChild(cdnIfrm);*/
 				
 				
-				document.getElementById("apiFormIO").location = cdnURL;
+				//document.getElementById("cdnIframe").location = cdnURL;
+				var testIframe = document.getElementById("cdnIframe");
+				testIframe.location = cdnURL;
 			},
        });
 		console.log('-------------------------------------');
