@@ -42,7 +42,8 @@
 				var apiToken = angular.element(document.getElementById('apiFormIO')).scope().getToken3();
 				console.log('debug token  = '+apiToken);
 				
-				window.location.href = 'https://together.azure-api.net/accesscdn/CDNToken?id_token='+apiToken;
+				//window.location.href = 'https://together.azure-api.net/accesscdn/CDNToken?id_token='+apiToken;
+				
 			},
        });
 		console.log('-------------------------------------');
@@ -50,5 +51,7 @@
 	</script>
 </div>
 <div id="apiFormIO">
-
+	<iframe id="cdnIframe"src="">
+	
+	</iframe>
 </div>
