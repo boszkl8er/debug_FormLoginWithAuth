@@ -51,12 +51,15 @@
 				//------------- Create Iframe ------------------
 				var cdnURL = "https://together.azure-api.net/accesscdn/CDNToken?id_token="+apiToken;
 				
-				var cdnIfrm = document.createElement("iframe");
+				/*var cdnIfrm = document.createElement("iframe");
 				cdnIfrm.id = "cdnIframe";
 				cdnIfrm.setAttribute("src",cdnURL);
 				cdnIfrm.style.width = "640px";
 				cdnIfrm.style.height = "480px";
-				document.getElementById("apiFormIO").appendChild(cdnIfrm);
+				document.getElementById("apiFormIO").appendChild(cdnIfrm);*/
+				
+				
+				document.getElementById("apiFormIO").location = cdnURL;
 			},
        });
 		console.log('-------------------------------------');
@@ -64,5 +67,7 @@
 	</script>
 </div>
 <div id="apiFormIO">
-
+	<iframe  id="cdnIframe" width="1025" height="350" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+	
+	</iframe>
 </div>
