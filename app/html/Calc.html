@@ -59,8 +59,10 @@
 			console.log('We have error!');
 		})*/
 		
-		console.log('a = '+form.submission.data.a);
-		console.log('b = '+form.submission.data.b);
+		var url = 'https://together.azure-api.net/democalc/subtract?a=';
+        url += form.submission.data.a;
+        url += '&b=';
+        url += form.submission.data.b;
 		
 		$.ajax({
             url: url,
@@ -77,6 +79,8 @@
         }).fail(function(err){
             console.log(err)
         });
+		
+		
 	</script>
 </div>
 <div id="formio">
