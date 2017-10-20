@@ -15,7 +15,8 @@
 		console.log('Token Home  = '+apiTokenHome);
 		
 		//var url = 'https://together.azure-api.net/accesscdn/CDNToken?id_token='+apiTokenHome;
-		var url = 'https://tst-demo2-apimgts.azure-api.net/accesscdn/CDNToken'+apiTokenHome;
+		var url = 'https://tst-demo2-apimgts.azure-api.net/accesscdn/CDNToken?id_token='+apiTokenHome;
+		
 		
 		var testIframe = document.getElementById("cdnIframe");
 		testIframe.src = url;
